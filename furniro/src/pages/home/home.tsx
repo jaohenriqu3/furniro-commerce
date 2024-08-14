@@ -1,5 +1,5 @@
 import React from 'react';
-import "./home.css"
+import "./home.css" 
 
 const Home: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ const Home: React.FC = () => {
       <header>
         <div className="container">
           <div className="logo">
-            <img src="/assets/images/logo-dsf2.png" alt="Logo" />
+            <img src="" alt="Logo" />
           </div>
           <nav>
             <ul className="nav-links">
