@@ -25,4 +25,11 @@ npx prisma studio
 npx prisma generate 
 
 
+function Home() {
+    return(
+        <>
 
+
+        </>
+    )
+}

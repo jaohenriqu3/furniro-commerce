@@ -10,4 +10,27 @@ datasource db {
 model User {
   id String @id @default(uuid()) 
   name String
+  last_name String 
+  company_name String 
+  zip_code String 
+  county String 
+  street_addres String 
+  city String 
+  province String 
+  add_on_addres String 
+  email_addres String 
+  additional_information String
+} 
+
+model Product {
+  id String @id @default(uuid()) 
+  name String 
+  price String
+  description String 
+  category String 
+  size String 
+  sku String 
+  tag String  
 }
+
+
