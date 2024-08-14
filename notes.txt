@@ -1,0 +1,28 @@
+LINKS:
+
+JWT nest: https://docs.nestjs.com/security/authentication
+ 
+Prisma: https://blog.rocketseat.com.br/prisma-uma-das-melhores-coisa-que-ja-aconteceu-no-ecossistema/
+ 
+Prisma + postgres: https://www.prisma.io/docs/orm/overview/databases/postgresql
+ 
+Extensão prisma vscode: https://www.prisma.io/blog/vscode-extension-prisma-rust-webassembly
+ 
+Comandos docker-compose: https://docs.docker.com/reference/cli/docker/compose/
+ 
+Comandos docker: https://www.geeksforgeeks.org/docker-instruction-commands/
+
+
+COMANDS:
+
+docker ps 
+docker-compose up 
+docker-compose up -d 
+docker logs 
+
+npx prisma migrate dev --name init 
+npx prisma studio 
+npx prisma generate 
+
+
+

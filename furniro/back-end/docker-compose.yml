@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: furniro
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: jh@120704
+      POSTGRES_DB: furniro
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+ 
+volumes:
+  db_data:
