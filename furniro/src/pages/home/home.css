@@ -77,7 +77,7 @@ nav .nav-links a:hover {
     width: 100%;
     max-width: 1440px;
     height: 316px;
-    background: url('/assets/images/banner-img.png');
+    background: url('../../assets/images/banner.png');
     display: flex;
     justify-content: center;
     align-items: center;

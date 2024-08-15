@@ -1,5 +1,20 @@
 import React from 'react';
-import "./home.css" 
+import "./home.css";
+import logo from "../../assets/images/logo.png";  
+import user from "../../assets/icons/user.png"; 
+import shop from "../../assets/icons/cart.png"; 
+import filter from "../../assets/icons/filter.png";
+import four from "../../assets/icons/four.png";
+import horizoltal from "../../assets/icons/horizontal.png";  
+import leviosa from "../../assets/images/leviosa.png";  
+import slytherine from "../../assets/images/slytherine.png"; 
+import respira from "../../assets/images/respira.png"; 
+import lolito from "../../assets/images/lolito.png";  
+import trophy from "../../assets/icons/trophy.png";  
+import guarantee from "../../assets/icons/guarantee.png";  
+import shipping from "../../assets/icons/shipping.png";  
+import customerSupport from "../../assets/icons/customer-support.png";  
+import logo2 from "../../assets/images/logo.png";
 
 const Home: React.FC = () => {
   return (
@@ -7,7 +22,7 @@ const Home: React.FC = () => {
       <header>
         <div className="container">
           <div className="logo">
-            <img src="" alt="Logo" />
+            <img src={logo} alt="Logo" />
           </div>
           <nav>
             <ul className="nav-links">
@@ -18,10 +33,8 @@ const Home: React.FC = () => {
             </ul>
           </nav>
           <div className="icons">
-            <a href="#"><img src="/assets/icons/Vector-user.png" alt="User" /></a>
-            <a href="#"><img src="/assets/icons/Vector-share.png" alt="Icon 2" /></a>
-            <a href="#"><img src="/assets/icons/Vector-heart.png" alt="Icon 3" /></a>
-            <a href="#"><img src="/assets/icons/Vector-shop.png" alt="Shop" /></a>
+            <a href="#"><img src={user} alt="User" /></a>
+            <a href="#"><img src={shop} alt="Shop" /></a>
           </div>
         </div>
       </header>
@@ -35,7 +48,11 @@ const Home: React.FC = () => {
 
       <section className="search-section">
         <div className="search-left">
-          <img src="/assets/icons/Vector-filter.png" alt="Filter Icon" />
+          <img src={filter} alt="Filter Icon" />
+          <span>Filter </span>
+          <img src={four} alt="Four Icon" /> 
+          <img src={horizoltal} alt="Horizontal Icon" />
+          <span>|</span>
           <span>Showing 1–16 of 32 results</span>
         </div>
         <div className="search-right">
@@ -48,7 +65,7 @@ const Home: React.FC = () => {
         <div className="main-content">
           <div className="product-cards">
             <div className="card">
-              <img src="/assets/images-products/image 1.png" alt="Product 1" />
+              <img src={slytherine} alt="Product 1" />
               <div className="discount-circle">30%</div>
               <div className="card-info">
                 <h2>Syltherine</h2>
@@ -60,7 +77,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="card">
-              <img src="/assets/images-products/image2.png" alt="Product 2" />
+              <img src={leviosa} alt="Product 2" />
               <div className="card-info">
                 <h2>Leviosa</h2>
                 <p>Stylish cafe chair</p>
@@ -70,7 +87,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="card">
-              <img src="/assets/images-products/Image3.png" alt="Product 1" />
+              <img src={lolito} alt="Product 1" />
               <div className="discount-circle">30%</div>
               <div className="card-info">
                 <h2>Lolito</h2>
@@ -82,7 +99,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="card">
-              <img src="/assets/images-products/Image4.png" alt="Product 1" />
+              <img src={respira} alt="Product 1" />
               <div className="discount-circle-new">New</div>
               <div className="card-info">
                 <h2>Respira</h2>
@@ -107,28 +124,28 @@ const Home: React.FC = () => {
 
       <section className="business-specs">
         <div className="spec">
-          <img src="/assets/icons/Vector-trophy.png" alt="Spec Icon" />
+          <img src={trophy} alt="Spec Icon" />
           <div className="spec-content">
             <h3>High Quality</h3>
             <p>Crafted from top materials</p>
           </div>
         </div>
         <div className="spec">
-          <img src="/assets/icons/Vector-check.png" alt="Spec Icon" />
+          <img src={guarantee} alt="Spec Icon" />
           <div className="spec-content">
             <h3>Warranty Protection</h3>
             <p>Over 2 years</p>
           </div>
         </div>
         <div className="spec">
-          <img src="/assets/icons/Vector-shipping.png" alt="Spec Icon" />
+          <img src={shipping} alt="Spec Icon" />
           <div className="spec-content">
             <h3>Free Shipping</h3>
             <p>Order over 150 $</p>
           </div>
         </div>
         <div className="spec">
-          <img src="/assets/icons/Vector-customer-support.png" alt="Spec Icon" />
+          <img src={customerSupport} alt="Spec Icon" />
           <div className="spec-content">
             <h3>24 / 7 Support</h3>
             <p>Dedicated support</p>
@@ -140,7 +157,7 @@ const Home: React.FC = () => {
         <div className="footer-container">
           <div className="footer-left">
             <div className="footer-logo">
-              <img src="/assets/icons/Funiro..png" alt="Logo" />
+              <img src={logo2} alt="Logo" />
             </div>
             <p className="footer-description">
               Rua Alexandre Dumas, 1711 - 6º andar - Chácara Santo Antônio, São Paulo - SP, 04717-004
