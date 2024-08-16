@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Home from './pages/home/Home.tsx'
+import Home from './pages/Home/home.tsx'
 
 
 createRoot(document.getElementById('root')!).render(

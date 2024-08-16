@@ -1,12 +1,12 @@
-import React from 'react';
-import "./home.css";
-import logo from "../../assets/images/logo.png";  
-import user from "../../assets/icons/user.png"; 
-import shop from "../../assets/icons/cart.png"; 
-import filter from "../../assets/icons/filter.png";
-import four from "../../assets/icons/four.png";
-import horizoltal from "../../assets/icons/horizontal.png";  
-import leviosa from "../../assets/images/leviosa.png";  
+import React from 'react';  
+import "./home.css";  
+import logo from "../../assets/images/logo.png";   
+import user from "../../assets/icons/user.png";  
+import shop from "../../assets/icons/cart.png";  
+import filter from "../../assets/icons/filter.png"; 
+import four from "../../assets/icons/four.png"; 
+import horizoltal from "../../assets/icons/horizontal.png";   
+import leviosa from "../../assets/images/leviosa.png";   
 import slytherine from "../../assets/images/slytherine.png"; 
 import respira from "../../assets/images/respira.png"; 
 import lolito from "../../assets/images/lolito.png";  
@@ -42,28 +42,28 @@ const Home: React.FC = () => {
       <section className="banner">
         <div className="banner-content">
           <h1>Shop</h1>
-          <p><b>Home</b> Shop</p>
+          <p><b>Home | </b> Shop</p>
         </div>
       </section>
-
       <section className="search-section">
         <div className="search-left">
-          <img src={filter} alt="Filter Icon" />
-          <span>Filter </span>
-          <img src={four} alt="Four Icon" /> 
-          <img src={horizoltal} alt="Horizontal Icon" />
-          <span>|</span>
-          <span>Showing 1–16 of 32 results</span>
+          <img src={filter} alt="Filter Icon" className='filter-icon' />
+          <span>Filter</span>
+          <img src={four} alt="Four Icon" className='exibition-icon' /> 
+          <img src={horizoltal} alt="Horizontal Icon" className='exibition-icon' /> 
+          <span className='filter-results'>| Showing 1–16 of 32 results</span>
         </div>
         <div className="search-right">
           <span>Show</span>
-          <input type="number" value={16} min={1} />
-        </div>
+          <input type="number" value={16} min={1} /> 
+          <span>Short By</span>
+          <input type="text" placeholder='Default'/>
+        </div> 
       </section>
 
       <main>
         <div className="main-content">
-          <div className="product-cards">
+          <div className="product-cards"> 
             <div className="card">
               <img src={slytherine} alt="Product 1" />
               <div className="discount-circle">30%</div>

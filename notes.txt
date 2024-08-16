@@ -32,4 +32,8 @@ function Home() {
 
         </>
     )
-}
+} 
+
+Porta 5432: Usada pelo PostgreSQL dentro do contêiner Docker. É a porta padrão para o PostgreSQL e onde o Prisma Client se conecta para acessar o banco de dados.
+Porta 5555: Usada pelo Prisma Client para acessar a aplicação e o banco de dados.
+Porta 3001: Usada pelo servidor da API para escutar requisições HTTP e servir os dados para o front-end.
