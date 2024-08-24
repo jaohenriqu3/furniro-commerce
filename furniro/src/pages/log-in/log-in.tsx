@@ -1,9 +1,32 @@
 import React from 'react'; 
+import { useState } from 'react';
+
 import { Link } from 'react-router-dom';  
 import './log-in.css';
 import LoginImg from "../../assets/images/loginpic.png";  
 import Apple from "../../assets/images/apple.png";  
 import Google  from "../../assets/images/google.png";  
+
+
+const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = async () => {
+    const response = await fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log('Login bem-sucedido:', data);
+    } else {
+      console.error('Erro ao fazer login');
+    }
+  };
 
 const LoginPage: React.FC = () => {
   return (
@@ -13,11 +36,17 @@ const LoginPage: React.FC = () => {
         <p className="signup-subtitle">Enter your Credentials to access your account</p>
         <form className="signup-form">
           <label htmlFor="email"><b> Email Address </b></label>
-          <input type="email" id="email" name="email" placeholder='Enter your email'/>
+          <input type="email" id="email" name="email" placeholder='Enter your email'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          />
 
           <label htmlFor="password"> <b>Password </b></label>
-          <input type="password" id="password" name="password" placeholder='Enter your password' />
-          <button type="submit" className="signup-button">Signup</button>
+          <input type="password" id="password" name="password" placeholder='Enter your password' 
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit" className="signup-button" onClick={handleLogin}>Signup</button>
         </form>
         <div className="terms">
             <input type="checkbox" id="terms" name="terms" />
