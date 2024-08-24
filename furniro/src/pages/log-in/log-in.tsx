@@ -8,27 +8,29 @@ import Apple from "../../assets/images/apple.png";
 import Google  from "../../assets/images/google.png";  
 
 
-const [email, setEmail] = useState('');
+const Login = () => {
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = async () => {
-    const response = await fetch('/login', {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const response = await fetch('http://localhost:3001/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email_addres: email, password }),
     });
 
+    const data = await response.json();
     if (response.ok) {
-      const data = await response.json();
-      console.log('Login bem-sucedido:', data);
+      alert('Login successful');
+      console.log(data); // Fazer algo com os dados do usuário autenticado
     } else {
-      console.error('Erro ao fazer login');
+      alert('Login failed');
     }
   };
 
-const LoginPage: React.FC = () => {
   return (
     <div className="signup-container">
       <div className="signup-content">
@@ -46,7 +48,7 @@ const LoginPage: React.FC = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit" className="signup-button" onClick={handleLogin}>Signup</button>
+          <button type="submit" className="signup-button" onClick={handleSubmit}>Signup</button>
         </form>
         <div className="terms">
             <input type="checkbox" id="terms" name="terms" />
@@ -77,4 +79,4 @@ const LoginPage: React.FC = () => {
   );
 };
 
-export default LoginPage;
+export default Login;

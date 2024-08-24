@@ -10,16 +10,16 @@ datasource db {
 model User {
   id                     String @id @default(uuid())
   name                   String
-  add_on_addres          String
-  additional_information String
-  city                   String
-  company_name           String
-  county                 String
-  email_addres           String
-  last_name              String
-  province               String
-  street_addres          String
-  zip_code               String
+  add_on_addres          String?
+  additional_information String?
+  city                   String?
+  company_name           String?
+  county                 String?
+  email_addres           String @unique
+  last_name              String?
+  province               String?
+  street_addres          String?
+  zip_code               String?
   password               String
 }
 
