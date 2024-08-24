@@ -1,44 +1,31 @@
-import http from 'http';
-import { PrismaClient } from '@prisma/client';
+const http = require('http');
+const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
 
 const server = http.createServer(async (req, res) => {
-  const urlParts = req.url.split('/');
-  const isProductsRoute = urlParts[1] === 'api' && urlParts[2] === 'products';
+  if (req.method === 'GET' && req.url.startsWith('/api/products')) {
+    const id = req.url.split('/').pop(); // Pega o ID da URL
 
-  // Rota para listar todos os produtos
-  if (req.method === 'GET' && isProductsRoute && urlParts.length === 3) {
     try {
-      const products = await prisma.product.findMany();
-      res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify(products));
-    } catch (error) {
-      res.writeHead(500, { 'Content-Type': 'text/plain' });
-      res.end('Internal Server Error');
-    }
-  
-  // Rota para buscar produto por ID
-  } else if (req.method === 'GET' && isProductsRoute && urlParts.length === 4) {
-    const productId = urlParts[3];
-    try {
-      const product = await prisma.product.findUnique({
-        where: { id: productId },
-      });
-
-      if (product) {
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify(product));
+      if (id) {
+        const product = await prisma.product.findUnique({ where: { id: parseInt(id, 10) } });
+        if (product) {
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify(product));
+        } else {
+          res.writeHead(404, { 'Content-Type': 'text/plain' });
+          res.end('Product not found');
+        }
       } else {
-        res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.end('Product Not Found');
+        const products = await prisma.product.findMany();
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify(products));
       }
     } catch (error) {
       res.writeHead(500, { 'Content-Type': 'text/plain' });
       res.end('Internal Server Error');
     }
-  
-  // Rota não encontrada
   } else {
     res.writeHead(404, { 'Content-Type': 'text/plain' });
     res.end('Not Found');

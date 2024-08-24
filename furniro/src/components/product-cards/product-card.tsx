@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react';
 
 // Definindo a interface Product com as propriedades esperadas
 interface Product {
-  id: string;
-  name: string;
-  price: string;
-  description: string;
-  category: string;
+  id: string; 
+  name: string; 
+  price: string; 
+  description: string; 
+  category: string; 
   size: string;
   sku: string;
-  tag: string;
+  tag: string;  
 }
-
+ 
 const ProductsPage: React.FC = () => {
   // Usando a interface Product para tipar o estado dos produtos
   const [products, setProducts] = useState<Product[]>([]);
