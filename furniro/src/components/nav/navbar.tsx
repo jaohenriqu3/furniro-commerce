@@ -7,7 +7,7 @@ import '../nav/navbar.css'
 function NavBar() {
   return(
     <header>
-    <div className="container">
+    <div className="nav-container">
       <div className="logo">
       <Link to='/'><img src={logo} alt="Logo" /></Link>
       </div>

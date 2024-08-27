@@ -74,7 +74,7 @@ const ProductPage = () => {
             <Link to='/cart-page'><button className="add-to-cart">Add To Cart</button></Link> 
           </div>
 
-          <div className='divider'></div>
+          <h3 className='divider'>____________________________________________________</h3>
         </div>
         <div className="product-info">
           <p className="sku">SKU: SS001</p>
