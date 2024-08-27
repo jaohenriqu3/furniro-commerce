@@ -1,0 +1,55 @@
+.card-hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Espaçamento entre os elementos, equivalente a gap-8 */
+    background-color: rgba(0, 0, 0, 0.5); /* bg-black bg-opacity-50 */
+    color: white;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+  
+  .card-hover:hover {
+    opacity: 1;
+  }
+  
+  .card-hover:hover .btn-details {
+    background-color: #b88e2f; /* bg-color-hover */
+    color: white;
+  }
+  
+  .btn-details {
+    cursor: pointer;
+    border: 1px solid #b88e2f; /* border color */
+    background-color: white;
+    padding: 0.625rem 3rem; /* px-12 py-2.5 */
+    font-size: 1.125rem; /* text-lg */
+    color: #b88e2f;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  }
+  
+  .card-actions {
+    display: flex;
+    gap: 1.25rem; /* Espaçamento entre os botões, equivalente a gap-5 */
+  }
+  
+  .card-action-button {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem; /* Espaçamento entre ícone e texto, equivalente a gap-1 */
+    border: none;
+    background: transparent;
+    font-size: 1rem; /* text-base */
+    color: white;
+    transition: color 300ms ease-in-out;
+  }
+  
+  .card-action-button svg {
+    margin-right: 0.25rem; /* Ajuste a margem do ícone se necessário */
+  }
+  

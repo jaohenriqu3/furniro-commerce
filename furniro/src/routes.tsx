@@ -3,7 +3,7 @@ import Home from './pages/home/home';
 import LoginPage from './pages/log-in/log-in';
 import SignupPage from './pages/sing-up/sing-up';
 import SingleProduct from './pages/single-product/single-product'; 
-import CartPage from './pages/cart/cartPage1';
+import CartPage from './pages/cart/cartPage';
 import Checkout from './pages/checkout/checkout';
 
 export const router = createBrowserRouter([
