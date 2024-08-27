@@ -1,0 +1,145 @@
+body {
+    font-family: sans-serif;
+}
+
+.cart-container {
+    display: flex;
+    gap: 20px; 
+    justify-content: center;
+    margin: 50px;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F9F1E7;
+    padding: 15px;
+    width: 817px;
+    height: 55px;
+}
+
+.cart-header-item {
+    text-align: center; 
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+}
+
+.cart-item-image {
+    width: 105px;
+    height: 105px;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cart-item-info-title {
+    font-weight: bold;
+}
+
+.cart-item-info-price {
+    color: #008000;
+}
+
+.cart-item-info-quantity {
+    color: #008000;
+}
+
+.cart-item-info-subtotal {
+    color: #008000;
+    font-weight: bold;
+}
+
+.cart-total {
+    background-color: #F9F1E7;
+    padding: 20px;
+    width: 393px;
+    height: 390px;
+    border-radius: 5px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.cart-price {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.cart-total-price-subtotal {
+    font-size: 16px; 
+    font-weight: bold;
+    margin-bottom: 20px; 
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+} 
+
+.cart-total-price-subtotal p {
+    font-size: 16px;
+    color: #9F9F9F; 
+    margin-left: 50px;
+} 
+
+.cart-total-price-subtotal label {
+    font-size: 16px;
+}
+
+.cart-total-price-total {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px; 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}  
+
+.cart-total-price-total label {
+    font-size: 16px;
+} 
+
+.cart-total-price-total p {
+    font-size: 20px;
+    color: #B88E2F; 
+    margin-left: 50px;
+} 
+
+
+.cart-total-button {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    text-decoration: none;
+}
+
+.cart-total-button button {
+    background-color: transparent;
+    color: #000000;
+    padding: 10px 20px;
+    cursor: pointer; 
+    height: 58px ;
+    width: 222px ; 
+    border-radius: 15px; 
+    margin-left: 15px;    
+    font-size: 20px;
+    text-decoration: none; 
+    cursor: pointer
+} 

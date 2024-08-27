@@ -9,11 +9,11 @@ function NavBar() {
     <header>
     <div className="container">
       <div className="logo">
-        <img src={logo} alt="Logo" />
+      <Link to='/'><img src={logo} alt="Logo" /></Link>
       </div>
       <nav>
         <ul className="nav-links">
-          <li><a href="#home"> Home </a></li>
+          <Link to='/'><li> Home </li></Link>
           <li><a href="#about"> About </a></li>
           <li><a href="#services"> Services </a></li>
           <li><a href="#contact"> Contact </a></li>

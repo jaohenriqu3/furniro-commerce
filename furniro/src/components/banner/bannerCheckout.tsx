@@ -1,17 +1,17 @@
 import './banner.css' 
 import arrow from "../../assets/icons/arrow.png";  
 
-const Banner = () => { 
+const BannerCheckout = () => { 
     return (
       <section className="banner"> 
-      <h1>Home</h1>
+      <h1>Checkout</h1>
         <div className="banner-content"> 
-          <b><p>Home</p></b>
+         <b><p>Home</p></b> 
           <img src={arrow} className='arrow'/> 
-          <p>Shop</p>
+          <p>Checkout</p>
         </div>
       </section> 
     )
 }
 
-export default Banner 
+export default BannerCheckout

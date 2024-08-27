@@ -3,7 +3,7 @@ import filter from "../../assets/icons/filter.png";
 import four from "../../assets/icons/four.png"; 
 import horizoltal from "../../assets/icons/horizontal.png";   
 
-const SearchSection = () => {
+const Pagination = () => {
     return (
         <section className="search-section">
         <div className="search-left">
@@ -12,7 +12,7 @@ const SearchSection = () => {
           <img src={four} alt="Four Icon" className='exibition-icon' /> 
           <img src={horizoltal} alt="Horizontal Icon" className='exibition-icon' /> 
           <span className='filter-results'>| Showing 1–16 of 32 results</span>
-        </div> 
+        </div>
         <div className="search-right">
           <span>Show</span>
           <input type="number" value={16} min={1} /> 
@@ -23,4 +23,4 @@ const SearchSection = () => {
     )
 }
 
-export default SearchSection
+export default Pagination
