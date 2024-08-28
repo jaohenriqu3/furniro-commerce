@@ -21,7 +21,7 @@ const Footer = () => {
               <h3>Links</h3>
               <ul>
                 <li><a href="#">Home</a></li>
-                <Link to='/single-product'> <li>Shop</li></Link>
+                <li>Shop</li> 
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
               </ul>
@@ -29,7 +29,7 @@ const Footer = () => {
             <div className="footer-column">
               <h3>Help</h3>
               <ul>
-                <li><a href="#payment-options">Payment Options</a></li>
+                <li><a href="#">Payment Options</a></li>
                 <li><a href="#returns">Returns</a></li>
                 <li><a href="#privacy-policies">Privacy Policies</a></li>
               </ul>

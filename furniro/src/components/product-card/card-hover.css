@@ -1,0 +1,58 @@
+.card-hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+  
+  .card-hover:hover {
+    opacity: 1;
+  }
+  
+  .btn-details:hover {
+    background-color: #b88e2f; 
+    color: white;
+  }
+  
+  .btn-details {
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    padding: 0.625rem 3rem; 
+    font-size: 1.125rem;
+    color: #b88e2f;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  }
+  
+  .card-actions {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-actions h6 {
+    font-weight: 16px;
+    margin-left: -15px;
+  }
+  
+  .card-action-button {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    max-width: 22px; 
+    max-height: 22px;
+    margin: 20px;
+  }
+
+
+  
+
+  

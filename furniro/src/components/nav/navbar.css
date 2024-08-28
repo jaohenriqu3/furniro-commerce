@@ -44,6 +44,10 @@ nav .nav-links a:hover {
     border-radius: 4px;
 }
 
+.login-icon{
+margin-right: 15px;
+}
+
 .icons a {
     display: inline-block;
     margin-left: 15px;
@@ -52,7 +56,8 @@ nav .nav-links a:hover {
 .icons img {
     width: 23px;
     height: 23px;
-    transition: transform 0.3s;
+    transition: transform 0.3s; 
+    cursor: pointer;
 }
 
 .icons img:hover {

@@ -1,55 +1,85 @@
-.card-hover {
+.main-content {
+    width: 100%;
+    max-width: 1440px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px; 
+}
+
+.card {
+    position: relative;
+    width: 285px; 
+    height: 446px;
+    background-color: #F4F5F7;
+    overflow: hidden;
+    margin: 5px;
+}
+
+.card img {
+    width: 100%; /* Ajusta a largura da imagem */
+    height: 301px;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+}
+
+.discount-circle, .discount-circle-new {
     position: absolute;
-    inset: 0;
+    top: 10px;
+    right: 10px;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 2rem; /* Espaçamento entre os elementos, equivalente a gap-8 */
-    background-color: rgba(0, 0, 0, 0.5); /* bg-black bg-opacity-50 */
-    color: white;
-    opacity: 0;
-    transition: opacity 300ms ease-in-out;
-  }
-  
-  .card-hover:hover {
-    opacity: 1;
-  }
-  
-  .card-hover:hover .btn-details {
-    background-color: #b88e2f; /* bg-color-hover */
-    color: white;
-  }
-  
-  .btn-details {
-    cursor: pointer;
-    border: 1px solid #b88e2f; /* border color */
-    background-color: white;
-    padding: 0.625rem 3rem; /* px-12 py-2.5 */
-    font-size: 1.125rem; /* text-lg */
-    color: #b88e2f;
-    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
-  }
-  
-  .card-actions {
-    display: flex;
-    gap: 1.25rem; /* Espaçamento entre os botões, equivalente a gap-5 */
-  }
-  
-  .card-action-button {
-    display: flex;
-    cursor: pointer;
     align-items: center;
-    justify-content: center;
-    gap: 0.25rem; /* Espaçamento entre ícone e texto, equivalente a gap-1 */
-    border: none;
-    background: transparent;
-    font-size: 1rem; /* text-base */
-    color: white;
-    transition: color 300ms ease-in-out;
-  }
-  
-  .card-action-button svg {
-    margin-right: 0.25rem; /* Ajuste a margem do ícone se necessário */
-  }
-  
+    font-size: 16px;
+}
+
+.discount-circle {
+    background-color: #E97171;
+}
+
+.discount-circle-new {
+    background-color: #2EC1AC;
+}
+
+.card-info {
+    padding: 10px;
+}
+
+.card-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.main-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.discount-price {
+    font-size: 16px;
+    color: #999;
+    text-decoration: line-through;
+}

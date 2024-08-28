@@ -51,12 +51,12 @@ const Checkout: React.FC = () => {
       city: '',
       state: '',
       zipCode: '',
-      country: 'BR', // Default to Brazil
+      country: '', 
     },
     orderSummary: {
       items: [
         {
-          name: 'Asgaard Sofa',
+          name: 'Slytherine',
           price: 250000,
         },
       ],

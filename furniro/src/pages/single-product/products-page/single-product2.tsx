@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import NavBar from '../../components/nav/navbar';
-import Footer from '../../components/footer/footer';
-import star from "../../assets/icons/star.png";
-import arrow from "../../assets/icons/arrow.png";
-import twitter from "../../assets/icons/twitterblack.png";
-import linkedin from "../../assets/icons/linkedinblack.png";
-import facebook from "../../assets/icons/facebookblack.png";
-import { useCart } from '../../components/cart/cartContext'; 
-import './single-product.css'; 
-import slytherine from '../../assets/images/slytherine.png';
+import NavBar from '../../../components/nav/navbar';
+import Footer from '../../../components/footer/footer';
+import star from "../../../assets/icons/star.png";
+import arrow from "../../../assets/icons/arrow.png";
+import twitter from "../../../assets/icons/twitterblack.png";
+import linkedin from "../../../assets/icons/linkedinblack.png";
+import facebook from "../../../assets/icons/facebookblack.png";
+import { useCart } from '../../../components/cart/cartContext'; 
+import '../single-product.css'; 
+import leviosa from '../../../assets/images/leviosa.png';
 
 interface Product {
   id: string;
@@ -32,7 +32,7 @@ const ProductPage: React.FC = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/api/products/1`);
+        const response = await fetch(`http://localhost:3001/api/products/2`);
         const data: Product = await response.json();
         setProduct(data);
       } catch (error) {
@@ -73,7 +73,7 @@ const ProductPage: React.FC = () => {
       <div className="product-page">
         <div className="product-images">
           <div className="image-container">
-            <img src={slytherine} alt={product.name} />
+            <img src={leviosa} alt={product.name} />
           </div>
         </div>
         <div className="product-details">

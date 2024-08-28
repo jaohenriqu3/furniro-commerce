@@ -26,11 +26,12 @@ model User {
 model Product {
   id          String @id @default(uuid())
   name        String
-  price       String
+  price       String 
+  discountPrice String?
   description String
   category    String
   size        String
-  sku         String
+  sku         String @unique
   tag         String
   imageURL    String
 }

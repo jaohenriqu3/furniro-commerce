@@ -29,7 +29,7 @@ function NavBar() {
         </ul>
       </nav>
       <div className="icons">
-        <Link to='/log-in'> <img src={user} alt="User" /> </Link>
+        <Link to='/log-in'> <img src={user} alt="User" className='login-icon'/> </Link>
         <img src={shop} alt="Shop" onClick={toggleSidebar} />
       </div>
         {isSidebarOpen && <CartSidebar onClose={toggleSidebar} />}

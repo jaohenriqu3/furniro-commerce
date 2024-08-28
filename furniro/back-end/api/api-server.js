@@ -4,6 +4,18 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 const server = http.createServer(async (req, res) => {
+  // CORS
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Permite todas as origens. 
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Métodos permitidos
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Cabeçalhos permitidos
+
+  // Verifica se é uma requisição OPTIONS (pré-vôo)
+  if (req.method === 'OPTIONS') {
+    res.writeHead(204); // Status 204 indica que a requisição foi bem-sucedida, mas não precisa de resposta
+    res.end();
+    return;
+  }
+
   const urlParts = req.url?.split('/') || [];
   const isProductsRoute = urlParts[1] === 'api' && urlParts[2] === 'products';
 
@@ -43,5 +55,3 @@ const server = http.createServer(async (req, res) => {
 server.listen(3001, () => {
   console.log('API server running on http://localhost:3001');
 });
-
-

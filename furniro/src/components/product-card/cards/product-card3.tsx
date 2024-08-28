@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'; 
 import { useParams } from 'react-router-dom';
-import { CardHover } from './card-hover'; 
-import slytherine from "../../assets/images/slytherine.png"; 
-import './product-card.css'
+import  CardHover3  from '../hovers/hover3';  
+import lolito from "../../../assets/images/lolito.png";   
 
 interface Product {
   id: string; 
@@ -17,7 +16,7 @@ interface Product {
   imageURL: string;
 } 
 
-const ProductCard: React.FC = () => {
+const ProductCard3: React.FC = () => {
   const [product, setProduct] = useState<Product | null>(null);
   const [isHovered, setIsHovered] = useState(false); // Estado para controlar o hover
   const { id } = useParams<{ id: string }>();
@@ -25,7 +24,7 @@ const ProductCard: React.FC = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/api/products/1`);
+        const response = await fetch(`http://localhost:3001/api/products/3`);
         const data: Product = await response.json();
         setProduct(data);
       } catch (error) {
@@ -39,7 +38,7 @@ const ProductCard: React.FC = () => {
   if (!product) {
     return <div>Loading...</div>;
   }
- 
+
   return (
     <div
       className="card"
@@ -47,8 +46,8 @@ const ProductCard: React.FC = () => {
       onMouseEnter={() => setIsHovered(true)}  // Ativa o hover
       onMouseLeave={() => setIsHovered(false)} // Desativa o hover
     >
-      <img alt={product.name} src={slytherine} />
-      <div className="discount-circle">30%</div>
+      <img alt={product.name} src={lolito} /> 
+      <div className="discount-circle">50%</div>
       <div className="card-info">
         <h2>{product.name}</h2>
         <p>{product.description}</p>
@@ -58,10 +57,10 @@ const ProductCard: React.FC = () => {
         </div>
       </div>
       
-      {isHovered && <CardHover productSlug={product.id} />} {/* Renderiza o hover */}
+      {isHovered && <CardHover3 productSlug={product.id} />} {/* Renderiza o hover */}
       
     </div>
   );
 };
 
-export default ProductCard;
+export default ProductCard3;

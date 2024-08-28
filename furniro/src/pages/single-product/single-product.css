@@ -192,10 +192,18 @@
     margin-bottom: 5px; 
     color: #9F9F9F;
   }
+
+  .share-icons{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+
+
+  }
   
   .social-icon {
     color: #666;
-    margin-right: 5px;
+    margin-left: 15px;
     text-decoration: none;
   } 
 
