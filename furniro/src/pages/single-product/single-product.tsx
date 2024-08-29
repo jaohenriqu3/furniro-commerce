@@ -87,7 +87,6 @@ const ProductPage: React.FC = () => {
           </div>
           <p className="description">{product.description}</p>
           <div className="options">
-            {/* Implementar lógica para escolher tamanhos e cores, se necessário */}
           </div>
           <div className="quantity-container">
             <button className="add-to-cart" onClick={handleAddToCart}>Add To Cart</button>

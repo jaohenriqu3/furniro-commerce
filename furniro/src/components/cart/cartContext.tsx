@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-// Definindo a interface do item do carrinho
+
 interface CartItem {
   id: number;
   name: string;
@@ -9,7 +9,7 @@ interface CartItem {
   imageURL: string;
 }
 
-// Definindo a interface do contexto do carrinho
+
 interface CartContextType {
   cartItems: CartItem[];
   addToCart: (item: CartItem) => void;
@@ -18,10 +18,9 @@ interface CartContextType {
   total: number;
 }
 
-// Criando o contexto
+
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-// Hook personalizado para usar o contexto
 export const useCart = () => {
   const context = useContext(CartContext);
   if (!context) {
@@ -30,7 +29,7 @@ export const useCart = () => {
   return context;
 };
 
-// Provedor do contexto
+
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
